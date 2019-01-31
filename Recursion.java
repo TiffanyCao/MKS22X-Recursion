@@ -37,5 +37,17 @@ public class Recursion{
     System.out.println(sqrt(169, 0.001));
     System.out.println("*testing sqrt(2): should return 1.41421*");
     System.out.println(sqrt(2, 0.001));
+
+    System.out.println("---Testing Fibonacci---");
+    System.out.println("*testing fibonacci(0): should return 0*");
+    System.out.println(fib(0));
+    System.out.println("*testing fibonacci(1): should return 1*");
+    System.out.println(fib(1));
+    System.out.println("*testing fibonacci(5): should return 5*");
+    System.out.println(fib(5));
+    System.out.println("*testing fibonacci(10): should return 55*");
+    System.out.println(fib(10));
+    System.out.println("*testing fibonacci(13): should return 233*");
+    System.out.println(fib(13));
   }
 }
