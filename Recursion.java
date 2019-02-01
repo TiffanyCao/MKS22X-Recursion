@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Recursion{
 
   public static double sqrt(double n, double tolerance){
@@ -24,6 +26,21 @@ public class Recursion{
     }
   }
 
+  public static ArrayList<Integer> makeAllSums(int n){
+    ArrayList<Integer> sums = new ArrayList<Integer>();
+    makeSumsH(n-1, n, 0, sums);
+    return sums;
+  }
+
+  public static void makeSumsH(int n, int added, int notAdded, ArrayList<Integer> list){
+    if(n == 0){
+      list.add(added);
+      list.add(notAdded);
+    }else{
+      makeSumsH(n-1, n+added, added, list);
+      makeSumsH(n-1, n+notAdded, notAdded, list);
+    }
+  }
   public static void main(String[] args){
 
     System.out.println("---Testing Sqrt---");
