@@ -44,18 +44,24 @@ public class Recursion{
   public static void main(String[] args){
 
     System.out.println("---Testing Sqrt---");
-    System.out.println("*testing sqrt(100): should return 10*");
+    System.out.println("*testing sqrt(100, 0.001): should return 10*");
     System.out.println(sqrt(100, 0.001));
-    System.out.println("*testing sqrt(25): should return 5*");
+    System.out.println("*testing sqrt(25, 0.001): should return 5*");
     System.out.println(sqrt(25, 0.001));
-    System.out.println("*testing sqrt(16): should return 4*");
+    System.out.println("*testing sqrt(16, 0.001): should return 4*");
     System.out.println(sqrt(16, 0.001));
-    System.out.println("*testing sqrt(169): should return 13*");
+    System.out.println("*testing sqrt(169, 0.001): should return 13*");
     System.out.println(sqrt(169, 0.001));
-    System.out.println("*testing sqrt(2): should return 1.41421*");
+    System.out.println("*testing sqrt(2, 0.001): should return 1.41421...*");
     System.out.println(sqrt(2, 0.001));
+    System.out.println("*testing sqrt(10000, 0.001): should return 100*");
+    System.out.println(sqrt(10000, 0.001));
+    System.out.println("*testing sqrt(250000, 0.001): should return 500*");
+    System.out.println(sqrt(250000, 0.001));
+    System.out.println("*testing sqrt(25600001, 0.001): should return 5059.64435...*");
+    System.out.println(sqrt(25600001, 0.001));
 
-    System.out.println("---Testing Fibonacci---");
+    System.out.println("\n---Testing Fibonacci---");
     System.out.println("*testing fibonacci(0): should return 0*");
     System.out.println(fib(0));
     System.out.println("*testing fibonacci(1): should return 1*");
@@ -66,5 +72,19 @@ public class Recursion{
     System.out.println(fib(10));
     System.out.println("*testing fibonacci(13): should return 233*");
     System.out.println(fib(13));
+    System.out.println("*testing fibonacci(20): should return 6765*");
+    System.out.println(fib(20));
+    System.out.println("*testing fibonacci(25): should return 75025*");
+    System.out.println(fib(25));
+    System.out.println("*testing fibonacci(30): should return 832040*");
+    System.out.println(fib(30));
+    System.out.println("*testing fibonacci(40): should return 102334155*");
+    System.out.println(fib(40));
+    System.out.println("*testing fibonacci(45): should return 1134903170*");
+    System.out.println(fib(45));
+
+    System.out.println("\n---Testing makeAllSums---");
+    System.out.println("*testing makeAllSums(3): should return [6, 5, 4, 3, 3, 2, 1, 0]");
+    System.out.println(Arrays.toString(makeAllSums(3).toArray()));
   }
 }
