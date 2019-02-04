@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Recursion{
+public class recursion{
 
   /**A method for recursively finding the approximate square root of a number using Newton's approximation
   *@param double n is the number that you want to the find the square root of
