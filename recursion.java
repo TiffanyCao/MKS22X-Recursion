@@ -8,8 +8,8 @@ public class recursion{
   *@return double the approximate square root
   *precondion: n is non-negative
   */
-  public static double sqrt(double n, double tolerance){
-    if(n == 0) return 0.0;
+  public double sqrt(double n, double tolerance){
+    if(n == 0.0) return 0.0;
     return sqrtH(n, n/2, tolerance); //call to helper function
   }
 
@@ -27,12 +27,24 @@ public class recursion{
     }
   }
 
+  /**A method that checks if a guess is close enough to the actual square root
+  *@param double guess
+  *@param double correct answer
+  *@return boolean
+  */
+  public boolean closeEnough(double guess, double correct){
+    if(guess == 0.0) return true;
+    if((Math.abs((guess - correct) / correct) * 100) <= 0.00001){
+      return true;
+    } return false;
+  }
+
   /**A method for recursively finding the n'th Fibonacci number in linear time
   *@param int n is the n'th Fibonacci number you want to find
   *@return int the Fibonacci value
   *precondition: n is non-negative
   */
-  public static int fib(int n){
+  public int fib(int n){
     return fibH(n, 0, 1, 0); //call to helper function
   }
 
@@ -80,7 +92,7 @@ public class recursion{
     }
   }
   public static void main(String[] args){
-
+/*
     System.out.println("---Testing Sqrt---");
     System.out.println("*testing sqrt(0, 0.001): should return 0*");
     System.out.println(sqrt(0, 0.001));
@@ -132,5 +144,6 @@ public class recursion{
     System.out.println(Arrays.toString(makeAllSums(1).toArray()));
     System.out.println("*testing makeAllSums(4): should return [10, 9, 8, 7, 7, 6, 5, 4, 6, 5, 4, 3, 3, 2, 1, 0]");
     System.out.println(Arrays.toString(makeAllSums(4).toArray()));
+    */
   }
 }
