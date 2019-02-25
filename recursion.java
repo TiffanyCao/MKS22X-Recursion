@@ -69,7 +69,7 @@ public class recursion{
   *@param int n the largest number that can be used
   *@return ArrayList<Integer> of all subset totals of the numbers 1 to n inclusive
   */
-  public static ArrayList<Integer> makeAllSums(int n){
+  public ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> sums = new ArrayList<Integer>(); //create a new integer ArrayList
     makeSumsH(n-1, n, 0, sums); //a call to the helper function
     return sums; //return the list
