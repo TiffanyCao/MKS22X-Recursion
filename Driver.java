@@ -43,7 +43,7 @@ public class Driver{
 
         double ans = r.sqrt(in,.00001);
         double correct = Math.sqrt(in);
-        if(r.closeEnough(ans,correct)){
+        if(closeEnough(ans,correct)){
           System.out.println("PASS test sqrt "+in+" "+ans);
         }
         else{
