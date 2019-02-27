@@ -30,6 +30,17 @@ public class Driver{
     }
   }
 
+  /**A method that checks if a guess is close enough to the actual square root
+  *@param double a is the guess
+  *@param double b is the correct (or expected) answer
+  *@return boolean
+  */
+  public static boolean closeEnough(double a, double b){
+    if(a==0.0 && b==0.0)return true;
+    if(a==0.0)return b < 0.00000000001;
+    if(b==0.0)return a < 0.00000000001;
+    return Math.abs(a-b)/a < 0.0001;//This is the normal % difference allowed
+  }
 
   //testcase must be a valid index of your input/output array
   public static void testSqrt(int testcase){
