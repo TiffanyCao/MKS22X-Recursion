@@ -71,6 +71,10 @@ public class recursion{
   */
   public ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> sums = new ArrayList<Integer>(); //create a new integer ArrayList
+    if(n == 0){
+      sums.add(0);
+      return sums;
+    }
     makeSumsH(n-1, n, 0, sums); //a call to the helper function
     return sums; //return the list
   }
