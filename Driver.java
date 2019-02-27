@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Driver{
   //testcase must be a valid index of your input/output array
   public static void testFib(int testcase){
@@ -73,12 +75,23 @@ public class Driver{
     }
   }
 
+  public static void testMakeSums(int testcase){
+    recursion r = new recursion();
+    int[] input = {0, 1, 2, 3, 4, 5, 6, 7};
+    ArrayList<Integer> answers = r.makeAllSums(input[testcase]);
+    System.out.println(answers);
+  }
+
   public static void main(String[] args) {
     for(int i = 0; i < 6; i++){
       testFib(i);
     }
     for(int i = 0; i < 5; i++){
       testSqrt(i);
+    }
+
+    for(int i = 0; i < 8; i++){
+      testMakeSums(i);
     }
   }
 }
